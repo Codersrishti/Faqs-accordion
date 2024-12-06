@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*{
+    margin: auto;
+    padding: auto;
+}
+img,
+svg,
+picture,
+canvas,
+video {
+    display: block;
+    max-width: 100%;
+}
+body{
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    min-height: 100svh;
+    background: lightpink url(Projects/faq-accordation/assets/images/background-pattern-mobile.svg) center top/100% 13.5rem no-repeat;
+}
+main{
+    padding: 8.875rem 1.563rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 37.5rem;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.563rem 0 1.563rem;
+    box-shadow: rgb(155, 155, 155) 1px 1px 5px;
+}
+.header{
+    display: flex;
+    gap: 2rem;
+}
+.header img{
+    max-width: 1.5rem;
+}
+h1{
+    color: #2f1533;
+    font-weight: bold;
+}
+button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 0.92rem;
+    border-top: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid rgb(235, 235, 235);
+    border-left: none;
+    border-right: none;
+    background: #fff;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+button:first-of-type {
+    border-top: none;
+}
+
+button:last-of-type {
+    border-bottom: none;
+}
+button:hover {
+    cursor: pointer;
+    color: #2f1533;
+}
+.active {
+    border: none;
+}
+.icon-minus {
+    display: none;
+}
+.active .icon-plus {
+    display: none;
+}
+.active .icon-minus {
+    display: block;
+}
+.panel{
+    color: #8c6991;
+    font-size: 0.85rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+p {
+    padding: 0.9rem 0;
+}
+button img {
+    padding-left: 3rem;
+}
+@media screen and (min-width:48em) {
+    .main-container {
+        padding: 2rem 2.6rem 2rem 2.6rem;
+    }
+    body{
+        background: url(Projects/faq-accordation/assets/images/background-pattern-desktop.svg)center top/100% 20rem no-repeat;
+    }
+    .header{
+        font-size: 3rem;
+    }
+    .header img {
+        max-width: 2rem;
+    }
+    button {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
